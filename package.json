@@ -1,0 +1,14 @@
+{
+  "name": "make-valet",
+  "version": "0.0.0",
+  "description": "NodeJS application that hosts details for your makes",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mozilla/make-valet.git"
+  },
+  "license": "MPL-2.0",
+  "dependencies": {
+    "express": "3.3.1",
+    "habitat": "0.4.2"
+  }
+}
