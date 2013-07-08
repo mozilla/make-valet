@@ -9,6 +9,7 @@
   "license": "MPL-2.0",
   "dependencies": {
     "express": "3.3.3",
-    "habitat": "0.4.2"
+    "habitat": "0.4.2",
+    "newrelic": "0.9.22"
   }
 }

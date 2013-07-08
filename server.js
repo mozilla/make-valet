@@ -1,3 +1,8 @@
+// New Relic Server monitoring support
+if ( process.env.NEW_RELIC_ENABLED ) {
+  require( "newrelic" );
+}
+
 var configVerify = require("./lib/configverify"),
     express = require("express"),
     Habitat = require("habitat"),
