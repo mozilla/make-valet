@@ -30,6 +30,12 @@ app.use(middleware.errorHandler);
 app.use(middleware.fourOhFourHandler);
 
 app.get(
+  "/healthcheck",
+  middleware.noSubdomains,
+  routes.healthCheck
+);
+
+app.get(
   "*",
   middleware.proxyPathPrepare(env.get("STATIC_DATA_STORE")),
   routes.proxyHandler
