@@ -16,6 +16,10 @@ module.exports.proxyHandler = function(req, res, next) {
       return next(utils.httpError(proxyRes.statusCode));
     }
 
+    proxyRes.on("error", function(err) {
+      next(err);
+    });
+
     proxyRes.pipe(res);
   }).on("error", function(err) {
     next(err);
