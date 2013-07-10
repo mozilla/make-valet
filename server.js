@@ -7,7 +7,8 @@ var configVerify = require("./lib/configverify"),
     express = require("express"),
     Habitat = require("habitat"),
     middleware = require("./lib/middleware"),
-    routes = require("./routes");
+    routes = require("./routes"),
+    slashes = require("connect-slashes");
 
 Habitat.load();
 
@@ -30,6 +31,8 @@ app.disable("x-powered-by");
 
 app.use(express.logger());
 app.use(express.compress());
+// Redirect paths with trailing slashes to paths w/o trailing slashes
+app.use(slashes(false));
 app.use(app.router);
 app.use(middleware.errorHandler);
 app.use(middleware.fourOhFourHandler);
