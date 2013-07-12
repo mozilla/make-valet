@@ -16,6 +16,9 @@ module.exports.proxyHandler = function(req, res, next) {
       return next(utils.httpError(proxyRes.statusCode));
     }
 
+    // Send content-type stored on S3
+    res.type(proxyRes.headers["content-type"]);
+
     proxyRes.on("error", function(err) {
       next(err);
     });
