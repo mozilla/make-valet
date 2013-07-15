@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Open Sans Light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/static/fonts/opensans-light-webfont.woff") format("woff"),
+       url("/static/fonts/opensans-light-webfont.ttf") format("truetype");
+}
+
+a {
+  color: rgb(39, 170, 225);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+div {
+  margin: 2em auto;
+  text-align: center;
+  width: 750px;
+}
+
+img {
+  width: 250px;
+}
+
+p {
+  color: rgb(85, 85, 85);
+  font: 2.5em "Open Sans Light", sans-serif;
+  margin: 0;
+}

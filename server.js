@@ -7,6 +7,8 @@ var configVerify = require("./lib/configverify"),
     express = require("express"),
     Habitat = require("habitat"),
     middleware = require("./lib/middleware"),
+    nunjucks = require("nunjucks"),
+    path = require("path"),
     routes = require("./routes"),
     slashes = require("connect-slashes");
 
@@ -14,7 +16,10 @@ Habitat.load();
 
 var app = express(),
     configErrors,
-    env = new Habitat();
+    env = new Habitat(),
+    nunjucksEnv = new nunjucks.Environment( new nunjucks.FileSystemLoader( path.join( __dirname, 'views' )), {
+      autoescape: true
+    })
 
 configErrors = configVerify(env.all());
 if (configErrors.length) {
@@ -28,12 +33,16 @@ if (configErrors.length) {
 }
 
 app.disable("x-powered-by");
+nunjucksEnv.express( app );
 
 app.use(express.logger());
 app.use(express.compress());
 // Redirect paths with trailing slashes to paths w/o trailing slashes
 app.use(slashes(false));
 app.use(app.router);
+app.use(express.static(path.join(__dirname, "public"), {
+  maxAge: "31556952000" // one year
+}));
 app.use(middleware.errorHandler);
 app.use(middleware.fourOhFourHandler);
 
