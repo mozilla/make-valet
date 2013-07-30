@@ -14,3 +14,6 @@ NodeJS application that hosts details for your [makes](https://github.com/mozill
 ### Additional configuration for localhost dev
 
 make-valet is built around the concept that each user gets their own subdomain for their makes. If you're running make-valet on `http://localhost`, you will not be able to use any subdomains unless you add them manually to your `/etc/hosts` file. As an example, if I'm the user `jon` I should add `127.0.0.1 jon.server.localhost` to my `/etc/hosts` file. Add an entry for each user that you're using on your local machine.
+
+### Mascot ###
+[Visit our mascot's homepage!](https://www.makes.org/thimble/makevalet)
