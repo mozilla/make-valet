@@ -6,6 +6,7 @@ if ( process.env.NEW_RELIC_ENABLED ) {
 var configVerify = require("./lib/configverify"),
     express = require("express"),
     Habitat = require("habitat"),
+    lessMiddleware = require("less-middleware"),
     middleware = require("./lib/middleware"),
     nunjucks = require("nunjucks"),
     path = require("path"),
@@ -19,7 +20,9 @@ var app = express(),
     env = new Habitat(),
     nunjucksEnv = new nunjucks.Environment( new nunjucks.FileSystemLoader( path.join( __dirname, 'views' )), {
       autoescape: true
-    })
+    }),
+    optimizeCSS = env.get("OPTIMIZE_CSS"),
+    tmpDir = path.join(require("os").tmpDir(), "make-valet");
 
 configErrors = configVerify(env.all());
 if (configErrors.length) {
@@ -39,10 +42,21 @@ app.use(express.logger());
 app.use(express.compress());
 // Redirect paths with trailing slashes to paths w/o trailing slashes
 app.use(slashes(false));
-app.use(app.router);
+app.use(lessMiddleware({
+  once: optimizeCSS,
+  dest: tmpDir,
+  src: path.join(__dirname, "public"),
+  compress: optimizeCSS,
+  yuicompress: optimizeCSS,
+  optimization: optimizeCSS ? 0 : 2
+}));
+app.use(express.static(tmpDir, {
+  maxAge: "31556952000" // one year
+}));
 app.use(express.static(path.join(__dirname, "public"), {
   maxAge: "31556952000" // one year
 }));
+app.use(app.router);
 app.use(middleware.errorHandler);
 app.use(middleware.fourOhFourHandler);
 
