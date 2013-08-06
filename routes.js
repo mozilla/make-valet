@@ -1,6 +1,10 @@
 var http = require("http"),
     version = require("./package").version;
 
+module.exports.embedShellHandler = function(req, res, next) {
+  res.render("embed-shell.html");
+};
+
 module.exports.healthCheck = function(req, res, next) {
   res.json({
     http: "okay",

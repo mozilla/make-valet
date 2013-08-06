@@ -7,6 +7,7 @@ var configVerify = require("./lib/configverify"),
     express = require("express"),
     Habitat = require("habitat"),
     lessMiddleware = require("less-middleware"),
+    Makeapi = require("makeapi-client"),
     middleware = require("./lib/middleware"),
     nunjucks = require("nunjucks"),
     path = require("path"),
@@ -18,6 +19,9 @@ Habitat.load();
 var app = express(),
     configErrors,
     env = new Habitat(),
+    makeAPIClient = new Makeapi({
+      apiURL: env.get("MAKE_ENDPOINT")
+    }),
     nunjucksEnv = new nunjucks.Environment( new nunjucks.FileSystemLoader( path.join( __dirname, 'views' )), {
       autoescape: true
     }),
@@ -36,6 +40,10 @@ if (configErrors.length) {
 }
 
 app.disable("x-powered-by");
+app.enable("trust proxy");
+app.locals({
+  WEBMAKERORG: env.get("WEBMAKERORG")
+});
 nunjucksEnv.express( app );
 
 app.use(express.logger());
@@ -59,6 +67,7 @@ app.use(express.static(path.join(__dirname, "public"), {
 app.use("/static/bower", express.static(path.join(__dirname, "bower_components"), {
   maxAge: "31556952000" // one year
 }));
+app.use(middleware.setVanityURL);
 app.use(app.router);
 app.use(middleware.errorHandler);
 app.use(middleware.fourOhFourHandler);
@@ -70,9 +79,15 @@ app.get(
 );
 
 app.get(
-  "*",
+  /.*(_|remix|edit)$/,
   middleware.proxyPathPrepare(env.get("STATIC_DATA_STORE")),
   routes.proxyHandler
+);
+
+app.get(
+  /.*[^_]$/,
+  middleware.loadMakeDetails(makeAPIClient),
+  routes.embedShellHandler
 );
 
 app.listen(env.get("PORT"), function() {
