@@ -1,0 +1,6 @@
+{
+  "name": "make-valet",
+  "dependencies": {
+    "open-sans-fontface": "~1.0.2"
+  }
+}
