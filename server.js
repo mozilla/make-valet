@@ -56,6 +56,9 @@ app.use(express.static(tmpDir, {
 app.use(express.static(path.join(__dirname, "public"), {
   maxAge: "31556952000" // one year
 }));
+app.use("/static/bower", express.static(path.join(__dirname, "bower_components"), {
+  maxAge: "31556952000" // one year
+}));
 app.use(app.router);
 app.use(middleware.errorHandler);
 app.use(middleware.fourOhFourHandler);
