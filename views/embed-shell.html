@@ -28,15 +28,15 @@
         </div>
       </div>
     </div>
-    <div class="thimble-project-container">
-      <iframe class="thimble-project-iframe" src="{{vanityURL}}_"></iframe>
+    <div class="embed-container {{ "popcorn" if make.contentType == "application/x-popcorn" }}">
+      <iframe class="embed-iframe" src="{{vanityURL}}_"></iframe>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
       var $toggle = $('.make-bar-expand-collapse'),
           $details = $('.make-details'),
           $arrow = $('img', $toggle),
-          $projectContainer = $(".thimble-project-container"),
+          $projectContainer = $(".embed-container"),
           $detailsContainer = $('.make-details-page'),
           detailsHidden = window.location.toString().indexOf('details=hidden') > -1,
           nav_open = false;
