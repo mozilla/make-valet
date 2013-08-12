@@ -201,3 +201,52 @@ body {
   }
 }
 
+
+/*********************************************************
+* Popcorn maker embed media queries
+*/
+
+@controlsHeight: 43px;
+@small: 560px;
+@medium: 640px;
+@large: 853px;
+@xlarge: 1280px;
+
+.height-width( @width ) {
+  width: @width;
+  height: (.5625 * @width ) + @controlsHeight;
+}
+
+.popcorn.embed-container {
+  margin: 0 auto;
+  position: static;
+}
+
+.popcorn.embed-iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and ( max-width: @medium ) {
+  .popcorn.embed-container {
+    .height-width( @small );
+  }
+}
+
+@media only screen and ( min-width: @medium ) {
+  .popcorn.embed-container {
+    .height-width( @medium );
+  }
+}
+
+@media only screen and ( min-width: @large ) {
+  .popcorn.embed-container {
+    .height-width( @large );
+  }
+}
+
+@media only screen and ( min-width: @xlarge ) {
+  .popcorn.embed-container {
+    .height-width( @xlarge );
+  }
+}
