@@ -87,7 +87,9 @@ app.get(
 app.get(
   /.*[^_]$/,
   middleware.loadMakeDetails(makeAPIClient),
-  routes.embedShellHandler
+  routes.embedShellHandler,
+  middleware.proxyPathPrepare(env.get("STATIC_DATA_STORE")),
+  routes.proxyHandler
 );
 
 app.listen(env.get("PORT"), function() {
