@@ -2,6 +2,10 @@ var http = require("http"),
     version = require("./package").version;
 
 module.exports.embedShellHandler = function(req, res, next) {
+  if (res.locals.make.contentType == "application/x-x-ray-goggles") {
+    return next();
+  }
+
   res.render("embed-shell.html");
 };
 
