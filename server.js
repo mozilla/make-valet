@@ -46,6 +46,9 @@ app.locals({
 });
 nunjucksEnv.express( app );
 
+app.use(express.favicon("public/static/images/favicon.ico", {
+  maxAge: 31556952000
+}));
 app.use(express.logger());
 app.use(express.compress());
 // Redirect paths with trailing slashes to paths w/o trailing slashes
