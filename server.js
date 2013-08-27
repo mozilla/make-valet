@@ -25,6 +25,7 @@ var app = express(),
     nunjucksEnv = new nunjucks.Environment( new nunjucks.FileSystemLoader( path.join( __dirname, 'views' )), {
       autoescape: true
     }),
+    oneYear = 31556952000,
     optimizeCSS = env.get("OPTIMIZE_CSS"),
     tmpDir = path.join(require("os").tmpDir(), "make-valet");
 
@@ -47,7 +48,7 @@ app.locals({
 nunjucksEnv.express( app );
 
 app.use(express.favicon("public/static/images/favicon.ico", {
-  maxAge: 31556952000
+  maxAge: oneYear
 }));
 app.use(express.logger());
 app.use(express.compress());
@@ -62,13 +63,13 @@ app.use(lessMiddleware({
   optimization: optimizeCSS ? 0 : 2
 }));
 app.use(express.static(tmpDir, {
-  maxAge: "31556952000" // one year
+  maxAge: oneYear
 }));
 app.use(express.static(path.join(__dirname, "public"), {
-  maxAge: "31556952000" // one year
+  maxAge: oneYear
 }));
 app.use("/static/bower", express.static(path.join(__dirname, "bower_components"), {
-  maxAge: "31556952000" // one year
+  maxAge: oneYear
 }));
 app.use(middleware.setVanityURL);
 app.use(app.router);
