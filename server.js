@@ -83,6 +83,11 @@ app.get(
 );
 
 app.get(
+  "/",
+  routes.userProfileHandler
+);
+
+app.get(
   /.*(_|remix|edit)$/,
   middleware.proxyPathPrepare(env.get("STATIC_DATA_STORE")),
   routes.proxyHandler
