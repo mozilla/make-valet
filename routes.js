@@ -35,3 +35,11 @@ module.exports.proxyHandler = function(req, res, next) {
     next(err);
   });
 };
+
+module.exports.userProfileHandler = function(req, res, next) {
+  if (req.subdomains.length !== 1) {
+    return next();
+  }
+
+  res.redirect(307, "https://webmaker.org/u/" + req.subdomains[0]);
+};
