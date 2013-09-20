@@ -43,6 +43,8 @@ if (configErrors.length) {
 app.disable("x-powered-by");
 app.enable("trust proxy");
 app.locals({
+  GA_ACCOUNT: env.get("GA_ACCOUNT"),
+  GA_DOMAIN: env.get("GA_DOMAIN"),
   WEBMAKERORG: env.get("WEBMAKERORG")
 });
 nunjucksEnv.express( app );
