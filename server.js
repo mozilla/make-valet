@@ -80,7 +80,6 @@ app.use(middleware.fourOhFourHandler);
 
 app.get(
   "/healthcheck",
-  middleware.noSubdomains,
   routes.healthCheck
 );
 
