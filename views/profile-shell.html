@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{{username}}</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/static/stylesheets/profile-shell.css">
+    {% include "googleanalytics.html" %}
+  </head>
+  <body>
+    <div class="embed-container">
+      <iframe class="embed-iframe" src="{{PROFILE_URL}}/?username={{username}}"></iframe>
+    </div>
+  </body>
+</html>
