@@ -43,3 +43,13 @@ module.exports.userProfileHandler = function(req, res, next) {
 
   res.redirect(307, "https://webmaker.org/u/" + req.subdomains[0]);
 };
+
+module.exports.userProfileService = function(req, res, next) {
+  if (req.subdomains.length !== 1) {
+    return next();
+  }
+
+  res.render("profile-shell.html", {
+    username: req.subdomains[0]
+  });
+};

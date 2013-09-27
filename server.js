@@ -19,6 +19,7 @@ Habitat.load();
 var app = express(),
     configErrors,
     env = new Habitat(),
+    profileHandlerFn;
     makeAPIClient = new Makeapi({
       apiURL: env.get("MAKE_ENDPOINT")
     }),
@@ -28,6 +29,12 @@ var app = express(),
     oneYear = 31556952000,
     optimizeCSS = env.get("OPTIMIZE_CSS"),
     tmpDir = path.join(require("os").tmpDir(), "make-valet");
+
+if ( env.get("USER_PROFILES_ENABLED") ) {
+  userProfileHandlerFn = routes.userProfileService;
+} else {
+  userProfileHandlerFn = routes.userProfileHandler;
+}
 
 configErrors = configVerify(env.all());
 if (configErrors.length) {
@@ -45,7 +52,8 @@ app.enable("trust proxy");
 app.locals({
   GA_ACCOUNT: env.get("GA_ACCOUNT"),
   GA_DOMAIN: env.get("GA_DOMAIN"),
-  WEBMAKERORG: env.get("WEBMAKERORG")
+  WEBMAKERORG: env.get("WEBMAKERORG"),
+  PROFILE_URL: env.get("PROFILE_URL")
 });
 nunjucksEnv.express( app );
 
@@ -85,7 +93,7 @@ app.get(
 
 app.get(
   "/",
-  routes.userProfileHandler
+  userProfileHandlerFn
 );
 
 app.get(
