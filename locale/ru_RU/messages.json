@@ -1,0 +1,8 @@
+{
+    "You found a loose thread!": "404: Вы нашли висящую нитку!",
+    "errorMessage": "Попробуйте <a href='https://webmaker.org/{{localeInfo.lang}}/search'>поиск</a> или посетите нашу <a href='https://webmaker.org/{{localeInfo.lang}}'>главную страницу</a>.",
+    "Remix": "Сделать ремикс",
+    "Made with": "Сделано на",
+    "Details": "Подробности",
+    "errorTitle": "Ой, Вы нашли"
+}

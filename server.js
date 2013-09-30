@@ -6,6 +6,7 @@ if ( process.env.NEW_RELIC_ENABLED ) {
 var configVerify = require("./lib/configverify"),
     express = require("express"),
     Habitat = require("habitat"),
+    i18n = require("webmaker-i18n"),
     lessMiddleware = require("less-middleware"),
     Makeapi = require("makeapi-client"),
     middleware = require("./lib/middleware"),
@@ -29,6 +30,11 @@ var app = express(),
     oneYear = 31556952000,
     optimizeCSS = env.get("OPTIMIZE_CSS"),
     tmpDir = path.join(require("os").tmpDir(), "make-valet");
+
+nunjucksEnv.addFilter("instantiate", function(input) {
+    var tmpl = new nunjucks.Template(input);
+    return tmpl.render(this.getVariables());
+});
 
 if ( env.get("USER_PROFILES_ENABLED") ) {
   userProfileHandlerFn = routes.userProfileService;
@@ -81,6 +87,22 @@ app.use(express.static(path.join(__dirname, "public"), {
 app.use("/static/bower", express.static(path.join(__dirname, "bower_components"), {
   maxAge: oneYear
 }));
+
+// List of supported languages - Please add them here in an alphabetical order
+var supportedLanguages = [ "en-US", "ru-RU", "th-TH" ];
+
+// Setup locales with i18n
+app.use( i18n.middleware({
+  supported_languages: supportedLanguages,
+  default_lang: "en-US",
+  mappings: {
+    "en": "en-US",
+    "ru": "ru-RU",
+    "th": "th-TH"
+  },
+  translation_directory: path.resolve( __dirname, "locale" )
+}));
+
 app.use(middleware.setVanityURL);
 app.use(app.router);
 app.use(middleware.errorHandler);
