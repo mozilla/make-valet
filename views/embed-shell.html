@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="{{ localeInfo.lang }}" dir="{{ localeInfo.direction }}">
   <head>
     <title>{{make.title}}</title>
     <link rel="shortcut icon" href="/favicon.ico">
@@ -18,14 +18,14 @@
               <img src="/static/images/logo_small.png" alt="Mozilla Webmaker">
             </a>
             <span class="make-bar-made-with">
-              Made with <a class="make-bar-link" href="https://webmaker.org">Webmaker</a>
+              {{ gettext("Made with") }} <a class="make-bar-link" href="https://webmaker.org">Webmaker</a>
             </span>
           </span>
           <span class="make-bar-expand-collapse">
-            Details<img src="/static/images/icon-arrow-down.png">
+            {{ gettext("Details") }}<img src="/static/images/icon-arrow-down.png">
           </span>
           <div class="make-bar-button">
-            <a href="{{vanityURL}}/remix" target="_blank" class="make-bar-button-remix make-bar-link"><span>Remix</span></a>
+            <a href="{{vanityURL}}/remix" target="_blank" class="make-bar-button-remix make-bar-link"><span>{{ gettext("Remix") }}</span></a>
           </div>
         </div>
       </div>

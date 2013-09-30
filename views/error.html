@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ localeInfo.lang }}" dir="{{ localeInfo.direction }}">
   <head>
-    <title>Oops, you've found a {{status}}</title>
+    <title>{{ gettext("errorTitle") }} {{status}}</title>
     <link rel="stylesheet" href="/static/stylesheets/error.css">
   </head>
   <body>
     <div class="container">
       <img src="/static/images/webmaker-loose-thread.png" alt="Webmaker logo">
       <p>{{status}}: {{message}}</p>
-      <p>Please try a <a href="https://webmaker.org/search">search</a> or visit our <a href="https://webmaker.org/">homepage</a>.</p>
+      <p>{{ gettext("errorMessage") | instantiate | safe }}</p>
     </div>
   </body>
 </html>
