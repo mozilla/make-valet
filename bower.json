@@ -1,6 +1,7 @@
 {
   "name": "make-valet",
   "dependencies": {
+    "jquery": "1.10.2",
     "open-sans-fontface": "~1.0.2"
   }
 }

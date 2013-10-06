@@ -9,7 +9,7 @@
   <body>
     <div class="make-details-page">
       <div class="make-details hide">
-        <iframe id="make-details-iframe" src="{{WEBMAKERORG}}/details/?id={{make.id}}"></iframe>
+        <iframe id="make-details-iframe" data-src="{{WEBMAKERORG}}/details/?id={{make.id}}"></iframe>
       </div>
       <div class="make-bar">
         <div class="make-bar-wrapper">
@@ -33,10 +33,11 @@
     <div class="embed-container {{ "popcorn" if make.contentType == "application/x-popcorn" }}">
       <iframe class="embed-iframe" src="{{vanityURL}}_" mozallowfullscreen webkitallowfullscreen allowfullscreen></iframe>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/static/bower/jquery/jquery.min.js"></script>
     <script>
       var $toggle = $('.make-bar-expand-collapse'),
           $details = $('.make-details'),
+          $infoFrame = $('#make-details-iframe'),
           $arrow = $('img', $toggle),
           $projectContainer = $(".embed-container"),
           $detailsContainer = $('.make-details-page'),
@@ -48,6 +49,11 @@
           duration: 200,
           easing: 'linear'
         });
+
+        // Defer loading of the iframe until the user actually wants to see it
+        if (!$infoFrame.attr("src")) {
+          $infoFrame.attr("src", $infoFrame.data("src"));
+        }
 
         if (nav_open) {
           nav_open = false;
