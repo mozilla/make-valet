@@ -89,7 +89,7 @@ app.use("/static/bower", express.static(path.join(__dirname, "bower_components")
 }));
 
 // List of supported languages - Please add them here in an alphabetical order
-var supportedLanguages = [ "en-US", "ru-RU", "th-TH" ];
+var supportedLanguages = [ "en-US", "fr", "ru-RU", "th-TH" ];
 
 // Setup locales with i18n
 app.use( i18n.middleware({
@@ -97,6 +97,8 @@ app.use( i18n.middleware({
   default_lang: "en-US",
   mappings: {
     "en": "en-US",
+    "fr-CA": "fr",
+    "fr-FR": "fr",
     "ru": "ru-RU",
     "th": "th-TH"
   },

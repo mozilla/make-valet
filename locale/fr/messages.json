@@ -1,0 +1,8 @@
+{
+  "Details": "Détails",
+  "errorMessage": "Veuillez essayer une <a href='https://webmaker.org/{{localeInfo.lang}}/search'>recherche</a> ou visitez notre <a href='https://webmaker.org/{{localeInfo.lang}}'>page d'accueil</a>.",
+  "errorTitle": "Oups, vous avez trouvé un",
+  "Made with": "Réalisé avec",
+  "Remix": "Remix",
+  "You found a loose thread!": "Vous avez trouvé un fil qui dépasse !"
+}
