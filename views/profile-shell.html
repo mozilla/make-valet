@@ -1,10 +1,29 @@
 <!doctype html>
 <html>
   <head>
-    <title>{{username}}</title>
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/static/stylesheets/profile-shell.css">
-    {% include "googleanalytics.html" %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Webmaker | {{username}}</title>
+    <link rel="icon" href="/favicon.ico">
+    <style type="text/css">
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .embed-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .embed-iframe {
+        height: 100%;
+        width: 100%;
+        border: 0;
+      }
+    </style>
   </head>
   <body>
     <div class="embed-container">
@@ -12,3 +31,5 @@
     </div>
   </body>
 </html>
+
+{% include "googleanalytics.html" %}
