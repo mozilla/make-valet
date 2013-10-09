@@ -38,7 +38,7 @@ module.exports.proxyHandler = function(req, res, next) {
 
 module.exports.userProfileHandler = function(req, res, next) {
   if (req.subdomains.length !== 1) {
-    return next();
+    return res.redirect(307, "https://webmaker.org");
   }
 
   res.redirect(307, "https://webmaker.org/u/" + req.subdomains[0]);
