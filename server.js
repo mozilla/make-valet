@@ -117,6 +117,7 @@ app.get(
 
 app.get(
   "/",
+  middleware.rootRedirect,
   userProfileHandlerFn
 );
 
