@@ -88,20 +88,14 @@ app.use("/static/bower", express.static(path.join(__dirname, "bower_components")
   maxAge: oneYear
 }));
 
-// List of supported languages - Please add them here in an alphabetical order
-var supportedLanguages = [ "en-US", "fr", "ru-RU", "th-TH" ];
+// List of supported languages - Add them in the .env file
+var supportedLanguages = env.get( "SUPPORTED_LANGS" );
 
 // Setup locales with i18n
 app.use( i18n.middleware({
   supported_languages: supportedLanguages,
   default_lang: "en-US",
-  mappings: {
-    "en": "en-US",
-    "fr-CA": "fr",
-    "fr-FR": "fr",
-    "ru": "ru-RU",
-    "th": "th-TH"
-  },
+  mappings: env.get( "LANG_MAPPINGS" ),
   translation_directory: path.resolve( __dirname, "locale" )
 }));
 
