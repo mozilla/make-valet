@@ -4,6 +4,13 @@
     <title>{{make.title}}</title>
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="/static/stylesheets/makedetails.css">
+    <meta property="og:description" content="{{make.description}}">
+    <meta property="og:image" content="{{make.thumbnail}}">
+    <meta property="og:site_name" content="Mozilla Webmaker">
+    <meta property="og:title" content="{{make.title}}">
+    <meta property="og:type" content="website">
+    <meta property="og:updated_time" content="{{make.updatedAt}}">
+    <meta property="og:url" content="{{vanityURL}}">
     {% include "googleanalytics.html" %}
   </head>
   <body>
