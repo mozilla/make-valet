@@ -1,0 +1,8 @@
+{
+    "You found a loose thread!": "পৃষ্ঠাটি খুঁজে পাওয়া যায় নি!",
+    "errorMessage": "অনুগ্রহ করে করে <a href='https://webmaker.org/{{localeInfo.lang}}/search'>একটি অনুসন্ধান করুন</a> অথবা আমাদের <a href='https://webmaker.org/{{localeInfo.lang}}'>হোমপেজ</a> পরিদর্শন করুন।",
+    "Remix": "রিমিক্স",
+    "Made with": "দিয়ে তৈরি করা",
+    "Details": "বিস্তারিত",
+    "errorTitle": "ওহহো, আপনি পেয়েছেন একটি "
+}
