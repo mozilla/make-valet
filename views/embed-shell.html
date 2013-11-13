@@ -38,9 +38,16 @@
       </div>
     </div>
     <div class="embed-container {{ "popcorn" if make.contentType == "application/x-popcorn" }}">
-      <iframe class="embed-iframe" src="{{vanityURL}}_" mozallowfullscreen webkitallowfullscreen allowfullscreen></iframe>
+      <div class="embed-wrapper">
+        <div class="embed-padding">
+          <iframe class="embed-iframe" src="{{vanityURL}}_" mozallowfullscreen webkitallowfullscreen allowfullscreen></iframe>
+        </div>
+      </div>
     </div>
     <script src="/static/bower/jquery/jquery.min.js"></script>
+    {% if make.contentType == "application/x-popcorn" %}
+      <script src='/static/js/resizeHandler.js'></script>
+    {% endif %}
     <script>
       var $toggle = $('.make-bar-expand-collapse'),
           $details = $('.make-details'),
