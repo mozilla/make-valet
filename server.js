@@ -20,7 +20,7 @@ Habitat.load();
 var app = express(),
     configErrors,
     env = new Habitat(),
-    profileHandlerFn;
+    profileHandlerFn,
     makeAPIClient = new Makeapi({
       apiURL: env.get("MAKE_ENDPOINT")
     }),
@@ -29,7 +29,9 @@ var app = express(),
     }),
     oneYear = 31556952000,
     optimizeCSS = env.get("OPTIMIZE_CSS"),
-    tmpDir = path.join(require("os").tmpDir(), "make-valet");
+    tmpDir = path.join(require("os").tmpDir(), "make-valet"),
+    messina,
+    logger;
 
 nunjucksEnv.addFilter("instantiate", function(input) {
     var tmpl = new nunjucks.Template(input);
@@ -66,7 +68,16 @@ nunjucksEnv.express( app );
 app.use(express.favicon("public/static/images/favicon.ico", {
   maxAge: oneYear
 }));
-app.use(express.logger());
+
+if ( env.get( "ENABLE_GELF_LOGS" ) ) {
+  messina = require( "messina" );
+  logger = messina( "make-valet-" + env.get( "NODE_ENV" ) || "development" );
+  logger.init();
+  app.use(logger.middleware());
+} else {
+  app.use(express.logger());
+}
+
 app.use(express.compress());
 // Redirect paths with trailing slashes to paths w/o trailing slashes
 app.use(slashes(false));
