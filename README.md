@@ -6,10 +6,11 @@ NodeJS application that hosts details for your [makes](https://github.com/mozill
 
 1. Clone this repository via git: `git clone https://github.com/mozilla/make-valet.git`
 2. Change directory to the repository: `cd make-valet/`
-3. Install dependencies: `npm install`
-4. Copy default config to working location: `cp env.dist .env`
-5. Edit config file with your favourite text editor. See comments in config file for what each option does
-6. Run the server: `node server.js`
+3. Install bower if not already installed: `npm install -g bower`
+4. Install dependencies: `npm install`
+5. Copy default config to working location: `cp env.dist .env`
+6. Edit config file with your favourite text editor. See comments in config file for what each option does
+7. Run the server: `node server.js`
 
 ### Additional configuration for localhost dev
 
