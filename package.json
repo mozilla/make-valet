@@ -12,7 +12,7 @@
     "express": "3.3.3",
     "habitat": "0.4.2",
     "less-middleware": "0.1.12",
-    "makeapi-client": "https://github.com/mozilla/makeapi-client/tarball/v0.5.6",
+    "makeapi-client": "https://github.com/mozilla/makeapi-client/tarball/v0.5.12",
     "messina": "0.1.1",
     "newrelic": "1.1.1",
     "nunjucks": "0.1.10",
