@@ -16,7 +16,7 @@
     "messina": "0.1.1",
     "newrelic": "1.1.1",
     "nunjucks": "0.1.10",
-    "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.2.8.tar.gz"
+    "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.3.2.tar.gz"
   },
   "devDependencies": {
     "bower": "1.2.7"
