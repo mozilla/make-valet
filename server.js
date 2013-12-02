@@ -5,6 +5,7 @@ if ( process.env.NEW_RELIC_ENABLED ) {
 
 var configVerify = require("./lib/configverify"),
     express = require("express"),
+    helmet = require("helmet"),
     Habitat = require("habitat"),
     i18n = require("webmaker-i18n"),
     lessMiddleware = require("less-middleware"),
@@ -77,6 +78,10 @@ if ( env.get( "ENABLE_GELF_LOGS" ) ) {
 } else {
   app.use(express.logger());
 }
+
+app.use(helmet.iexss());
+app.use(helmet.contentTypeOptions());
+app.use(helmet.xframe());
 
 app.use(express.compress());
 // Redirect paths with trailing slashes to paths w/o trailing slashes
