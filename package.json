@@ -12,6 +12,7 @@
     "express": "3.3.3",
     "habitat": "0.4.2",
     "helmet": "0.1.2",
+    "hood": "0.2.1",
     "less-middleware": "0.1.12",
     "makeapi-client": "https://github.com/mozilla/makeapi-client/tarball/v0.5.12",
     "messina": "0.1.1",

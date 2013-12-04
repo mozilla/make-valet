@@ -29,7 +29,9 @@
     <div class="embed-container">
       <iframe class="embed-iframe" src="{{PROFILE_URL}}/?username={{username}}"></iframe>
     </div>
+    {% if GA_ACCOUNT %}
+    <script src="/dynamic/js/googleanalytics.js"></script>
+    <script src="https://ssl.google-analytics.com/ga.js" async></script>
+    {% endif %}
   </body>
 </html>
-
-{% include "googleanalytics.html" %}
