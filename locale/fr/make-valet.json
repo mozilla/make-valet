@@ -1,8 +1,0 @@
-{
-    "You found a loose thread!": "Vous avez trouvé une impasse ! (page 404)",
-    "errorMessage": "Veuillez essayer une <a href='https://webmaker.org/{{localeInfo.lang}}/search'>recherche</a> ou visitez notre <a href='https://webmaker.org/{{localeInfo.lang}}'>page d'accueil</a>.",
-    "Remix": "Remix",
-    "Made with": "Réalisé avec",
-    "Details": "Détails",
-    "errorTitle": "Oups, vous avez trouvé un"
-}
