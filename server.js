@@ -110,7 +110,7 @@ var supportedLanguages = env.get( "SUPPORTED_LANGS" );
 app.use( i18n.middleware({
   supported_languages: supportedLanguages,
   default_lang: "en-US",
-  mappings: env.get( "LANG_MAPPINGS" ),
+  mappings: require("webmaker-locale-mapping"),
   translation_directory: path.resolve( __dirname, "locale" )
 }));
 

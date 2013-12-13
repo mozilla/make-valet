@@ -18,6 +18,7 @@
     "newrelic": "1.1.1",
     "nunjucks": "0.1.10",
     "webmaker-download-locales": "0.0.6",
+    "webmaker-locale-mapping": "latest",
     "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.3.2.tar.gz"
   },
   "devDependencies": {
