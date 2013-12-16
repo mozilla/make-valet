@@ -127,7 +127,16 @@ app.get(
 app.get(
   "/",
   middleware.rootRedirect,
+  middleware.addCSP({
+    detailsHost: env.get("WEBMAKERORG"),
+    profileHost: env.get("PROFILE_URL")
+  }),
   userProfileHandlerFn
+);
+
+app.get(
+  "/dynamic/js/googleanalytics.js",
+  routes.analytics
 );
 
 app.get(
@@ -139,7 +148,12 @@ app.get(
 app.get(
   /.*[^_]$/,
   middleware.loadMakeDetails(makeAPIClient),
+  middleware.addCSP({
+    detailsHost: env.get("WEBMAKERORG"),
+    profileHost: env.get("PROFILE_URL")
+  }),
   routes.embedShellHandler,
+  middleware.removeCSP,
   middleware.proxyPathPrepare(env.get("STATIC_DATA_STORE")),
   routes.proxyHandler
 );

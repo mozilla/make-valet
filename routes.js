@@ -1,6 +1,11 @@
 var http = require("http"),
     version = require("./package").version;
 
+module.exports.analytics = function(req, res, next) {
+  res.type("text/javascript; charset=utf-8");
+  res.render("googleanalytics.js");
+};
+
 module.exports.embedShellHandler = function(req, res, next) {
   if (res.locals.make.contentType == "application/x-x-ray-goggles") {
     return next();
