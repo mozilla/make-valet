@@ -58,6 +58,9 @@ if (configErrors.length) {
 
 app.disable("x-powered-by");
 app.enable("trust proxy");
+// Output "foo" as a subdomain when hostname is "foo.localhost"
+// https://github.com/visionmedia/express/pull/1475
+app.set("subdomain offset", 1);
 app.locals({
   GA_ACCOUNT: env.get("GA_ACCOUNT"),
   GA_DOMAIN: env.get("GA_DOMAIN"),
