@@ -140,7 +140,14 @@ app.get(
 );
 
 app.get(
-  /.*(_|remix|edit)$/,
+  /.*_$/,
+  middleware.proxyPathPrepare(env.get("STATIC_DATA_STORE")),
+  routes.proxyHandler
+);
+
+app.get(
+  /.*\/(remix|edit)$/,
+  middleware.makeRedirect(makeAPIClient),
   middleware.proxyPathPrepare(env.get("STATIC_DATA_STORE")),
   routes.proxyHandler
 );
