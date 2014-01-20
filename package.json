@@ -1,6 +1,6 @@
 {
   "name": "make-valet",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "NodeJS application that hosts details for your makes",
   "repository": {
     "type": "git",
