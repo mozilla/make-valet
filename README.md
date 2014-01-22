@@ -12,6 +12,18 @@ NodeJS application that hosts details for your [makes](https://github.com/mozill
 6. Edit config file with your favourite text editor. See comments in config file for what each option does
 7. Run the server: `node server.js`
 
-### Additional configuration for localhost dev
+## Running make-valet without an Internet connection
 
-make-valet is built around the concept that each user gets their own subdomain for their makes. If you're running make-valet on `http://localhost`, you will not be able to use any subdomains unless you add them manually to your `/etc/hosts` file. As an example, if I'm the user `jon` I should add `127.0.0.1 jon.server.localhost` to my `/etc/hosts` file. Add an entry for each user that you're using on your local machine.
+make-valet relies upon the [xip.io](http://xip.io) domain to access user subdomains. If you do not have an internet connection available, you'll need to have some other way of setting domains on your local machine.
+
+### Edit your /etc/hosts file
+
+For example, if I'm the user `jon`, you'll need to add an entry for jon.127.0.0.1.xip.io to your local hosts file:
+
+`127.0.0.1 jon.127.0.0.1.xip.io`
+
+The downside of this approach is that you'll need to add a hostname for each user you create locally.
+
+### Run a local DNS resolver
+
+If you're running the make-valet offline with a number of users, you should use a local DNS resolver like [dnsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html) to scale up to any number of users
