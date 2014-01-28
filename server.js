@@ -130,7 +130,8 @@ app.get(
   "/",
   middleware.addCSP({
     detailsHost: env.get("WEBMAKERORG"),
-    profileHost: env.get("PROFILE_URL")
+    profileHost: env.get("PROFILE_URL"),
+    reportToHost: env.get("CSP_LOGGER")
   }),
   routes.userProfileService
 );
@@ -158,7 +159,8 @@ app.get(
   middleware.loadMakeDetails(makeAPIClient),
   middleware.addCSP({
     detailsHost: env.get("WEBMAKERORG"),
-    profileHost: env.get("PROFILE_URL")
+    profileHost: env.get("PROFILE_URL"),
+    reportToHost: env.get("CSP_LOGGER")
   }),
   routes.embedShellHandler,
   middleware.removeCSP,
