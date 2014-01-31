@@ -44,12 +44,6 @@ nunjucksEnv.addFilter("instantiate", function(input) {
     return tmpl.render(this.getVariables());
 });
 
-if ( env.get("USER_PROFILES_ENABLED") ) {
-  userProfileHandlerFn = routes.userProfileService;
-} else {
-  userProfileHandlerFn = routes.userProfileHandler;
-}
-
 configErrors = configVerify(env.all());
 if (configErrors.length) {
   console.log("You need to fix the following configuration errors:");
@@ -134,12 +128,11 @@ app.get(
 
 app.get(
   "/",
-  middleware.rootRedirect,
   middleware.addCSP({
     detailsHost: env.get("WEBMAKERORG"),
     profileHost: env.get("PROFILE_URL")
   }),
-  userProfileHandlerFn
+  routes.userProfileService
 );
 
 app.get(
