@@ -23,7 +23,12 @@ var app = express(),
     env = new Habitat(),
     profileHandlerFn,
     makeAPIClient = new Makeapi({
-      apiURL: env.get("MAKE_ENDPOINT")
+      apiURL: env.get("MAKE_ENDPOINT"),
+      hawk: {
+        id: env.get("MAKE_PUBLIC_KEY"),
+        key: env.get("MAKE_PRIVATE_KEY"),
+        algorithm: "sha256"
+      }
     }),
     nunjucksEnv = new nunjucks.Environment( new nunjucks.FileSystemLoader( path.join( __dirname, 'views' )), {
       autoescape: true
