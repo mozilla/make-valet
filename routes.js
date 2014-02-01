@@ -43,6 +43,6 @@ module.exports.proxyHandler = function(req, res, next) {
 
 module.exports.userProfileService = function(req, res, next) {
   res.render("profile-shell.html", {
-    username: req.subdomains[0]
+    username: req.subdomains.pop()
   });
 };
