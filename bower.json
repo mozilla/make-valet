@@ -2,6 +2,7 @@
   "name": "make-valet",
   "dependencies": {
     "jquery": "2.0.3",
-    "open-sans-fontface": "1.0.4"
+    "open-sans-fontface": "1.0.4",
+    "webmaker-analytics": "0.0.1"
   }
 }
