@@ -8,6 +8,10 @@ var $toggle = $('.make-bar-expand-collapse'),
     nav_open = false;
 
 $toggle.on('click', function(e) {
+  analytics.event('Details Toggled', {
+    label: window.location.pathname,
+    nonInteraction: true
+  });
   $details.slideToggle({
     duration: 200,
     easing: 'linear'
