@@ -1,17 +1,19 @@
 var $toggle = $('.make-bar-expand-collapse'),
     $details = $('.make-details'),
     $infoFrame = $('#make-details-iframe'),
+    $remixButton = $('.make-bar-button-remix'),
     $arrow = $('img', $toggle),
     $projectContainer = $(".embed-container"),
     $detailsContainer = $('.make-details-page'),
     detailsHidden = window.location.toString().indexOf('details=hidden') > -1,
     nav_open = false;
 
+$remixButton.on('click', function(e) {
+  analytics.event('Remixed Clicked', {label: window.location.href});
+});
+
 $toggle.on('click', function(e) {
-  analytics.event('Details Toggled', {
-    label: window.location.pathname,
-    nonInteraction: true
-  });
+  analytics.event('Details Toggled', {label: window.location.href});
   $details.slideToggle({
     duration: 200,
     easing: 'linear'
