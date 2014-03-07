@@ -4,7 +4,7 @@
   {% if GA_DOMAIN %}
   _gaq.push(['_setDomainName', '{{ GA_DOMAIN }}']);
   {% endif %}
-  _gaq.push(['_trackPageview', window.location.pathname]);
+  _gaq.push(['_trackPageview']);
 
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
