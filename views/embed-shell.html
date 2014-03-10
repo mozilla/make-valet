@@ -50,6 +50,13 @@
     {% if make.contentType == "application/x-popcorn" %}
       <script src='/static/js/resizeHandler.js'></script>
     {% endif %}
+    {% if GA_ACCOUNT %}
     <script src="/dynamic/js/googleanalytics.js"></script>
+    <script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_trackPageview']);
+    </script>
+    <script src="https://ssl.google-analytics.com/ga.js" async></script>
+    {% endif %}
   </body>
 </html>
