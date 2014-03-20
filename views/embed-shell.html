@@ -2,6 +2,7 @@
 <html lang="{{ localeInfo.lang }}" dir="{{ localeInfo.direction }}">
   <head>
     <title>{{make.title}}</title>
+    {{ newrelic.getBrowserTimingHeader() | safe }}
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="/static/stylesheets/makedetails.css">
     <meta property="og:description" content="{{make.description}}">
