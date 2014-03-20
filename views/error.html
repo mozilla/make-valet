@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ localeInfo.lang }}" dir="{{ localeInfo.direction }}">
   <head>
+    {{ newrelic.getBrowserTimingHeader() | safe }}
     <title>{{ gettext("errorTitle") }} {{status}}</title>
     <link rel="stylesheet" href="/static/stylesheets/error.css">
   </head>

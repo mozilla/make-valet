@@ -1,6 +1,13 @@
 // New Relic Server monitoring support
+var newrelic;
 if ( process.env.NEW_RELIC_ENABLED ) {
-  require( "newrelic" );
+  newrelic = require( "newrelic" );
+} else {
+  newrelic = {
+    getBrowserTimingHeader: function () {
+      return "<!-- New Relic RUM disabled -->";
+    }
+  };
 }
 
 var configVerify = require("./lib/configverify"),
@@ -63,6 +70,7 @@ app.set("subdomain offset", 1);
 app.locals({
   GA_ACCOUNT: env.get("GA_ACCOUNT"),
   GA_DOMAIN: env.get("GA_DOMAIN"),
+  newrelic: newrelic,
   WEBMAKERORG: env.get("WEBMAKERORG"),
   PROFILE_URL: env.get("PROFILE_URL")
 });
