@@ -1,5 +1,8 @@
 var http = require("http"),
-    version = require("./package").version;
+    version = require("./package").version,
+    wts = require("webmaker-translation-stats"),
+    i18n = require("webmaker-i18n"),
+    path = require("path");
 
 module.exports.analytics = function(req, res, next) {
   res.type("text/javascript; charset=utf-8");
@@ -15,9 +18,17 @@ module.exports.embedShellHandler = function(req, res, next) {
 };
 
 module.exports.healthCheck = function(req, res, next) {
-  res.json({
+  var healthcheckObject = {
     http: "okay",
     version: version
+  };
+  wts(i18n.getSupportLanguages(), path.join(__dirname, "locale"), function(err, data) {
+    if(err) {
+      healthcheckObject.locales = err.toString();
+    } else {
+      healthcheckObject.locales = data;
+    }
+    res.json(healthcheckObject);
   });
 };
 
