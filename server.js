@@ -152,6 +152,7 @@ app.get(
 app.get(
   /.*_$/,
   middleware.proxyPathPrepare(env.get("STATIC_DATA_STORE")),
+  middleware.addCORS(env.get("ALLOW_ORIGINS")),
   routes.proxyHandler
 );
 
