@@ -16,7 +16,7 @@
     "less-middleware": "0.1.12",
     "makeapi-client": "https://github.com/mozilla/makeapi-client/tarball/v0.5.17",
     "messina": "0.1.1",
-    "newrelic": "1.4.0",
+    "newrelic": "1.5.5",
     "nunjucks": "0.1.10",
     "webmaker-download-locales": "0.1.2",
     "webmaker-locale-mapping": "latest",
