@@ -28,7 +28,6 @@ Habitat.load();
 var app = express(),
     configErrors,
     env = new Habitat(),
-    profileHandlerFn,
     makeAPIClient = new Makeapi({
       apiURL: env.get("MAKE_ENDPOINT"),
       hawk: {
@@ -71,8 +70,7 @@ app.locals({
   GA_ACCOUNT: env.get("GA_ACCOUNT"),
   GA_DOMAIN: env.get("GA_DOMAIN"),
   newrelic: newrelic,
-  WEBMAKERORG: env.get("WEBMAKERORG"),
-  PROFILE_URL: env.get("PROFILE_URL")
+  WEBMAKERORG: env.get("WEBMAKERORG")
 });
 nunjucksEnv.express( app );
 
@@ -136,12 +134,8 @@ app.get(
 
 app.get(
   "/",
-  middleware.addCSP({
-    detailsHost: env.get("WEBMAKERORG"),
-    profileHost: env.get("PROFILE_URL"),
-    reportToHost: env.get("CSP_LOGGER")
-  }),
-  routes.userProfileService
+  middleware.setUsername,
+  routes.webmakerProfile2Redirect(env.get("PROFILE_URL"))
 );
 
 app.get(
@@ -159,6 +153,7 @@ app.get(
 app.get(
   /.*\/(remix|edit)$/,
   middleware.makeRedirect(makeAPIClient),
+  middleware.setUsername,
   middleware.proxyPathPrepare(env.get("STATIC_DATA_STORE")),
   routes.proxyHandler
 );
@@ -168,11 +163,11 @@ app.get(
   middleware.loadMakeDetails(makeAPIClient),
   middleware.addCSP({
     detailsHost: env.get("WEBMAKERORG"),
-    profileHost: env.get("PROFILE_URL"),
     reportToHost: env.get("CSP_LOGGER")
   }),
   routes.embedShellHandler,
   middleware.removeCSP,
+  middleware.setUsername,
   middleware.proxyPathPrepare(env.get("STATIC_DATA_STORE")),
   routes.proxyHandler
 );

@@ -1,8 +1,9 @@
 var http = require("http"),
-    version = require("./package").version,
-    wts = require("webmaker-translation-stats"),
     i18n = require("webmaker-i18n"),
-    path = require("path");
+    path = require("path"),
+    template = require("url-template"),
+    version = require("./package").version,
+    wts = require("webmaker-translation-stats");
 
 module.exports.analytics = function(req, res, next) {
   res.type("text/javascript; charset=utf-8");
@@ -52,8 +53,10 @@ module.exports.proxyHandler = function(req, res, next) {
   });
 };
 
-module.exports.userProfileService = function(req, res, next) {
-  res.render("profile-shell.html", {
-    username: req.subdomains.pop()
-  });
+module.exports.webmakerProfile2Redirect = function(profileURL) {
+  var redirectURL = template.parse(profileURL);
+
+  return function(req, res, next) {
+    res.redirect(307, redirectURL.expand({ username: res.locals.username }));
+  };
 };
