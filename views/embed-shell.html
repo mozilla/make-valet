@@ -19,9 +19,6 @@
   </head>
   <body>
     <div class="make-details-page">
-      <div class="make-details hide">
-        <iframe id="make-details-iframe" data-src="{{WEBMAKERORG}}/details/?id={{make.id}}"></iframe>
-      </div>
       <div class="make-bar">
         <div class="make-bar-wrapper">
           <span class="make-bar-logospan">
@@ -31,9 +28,6 @@
             <span class="make-bar-made-with">
               {{ gettext("Made with Webmaker") | safe }}
             </span>
-          </span>
-          <span class="make-bar-expand-collapse">
-            {{ gettext("Details") }}<img src="/static/images/icon-arrow-down.png">
           </span>
           <div class="make-bar-button">
             <a href="{{vanityURL}}/remix" target="_blank" class="make-bar-button-remix make-bar-link"><span>{{ gettext("Remix") }}</span></a>
