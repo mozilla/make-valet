@@ -28,5 +28,8 @@
   "scripts": {
     "postinstall": "bower install",
     "download-locales": "webmaker-download-locales make-valet"
+  },
+  "engines": {
+    "node": "0.10.x"
   }
 }
