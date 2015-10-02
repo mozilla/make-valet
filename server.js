@@ -93,10 +93,9 @@ app.use(helmet.noSniff());
 app.use(express.compress());
 // Redirect paths with trailing slashes to paths w/o trailing slashes
 app.use(slashes(false));
-app.use(lessMiddleware({
+app.use(lessMiddleware(path.join(__dirname, "public"), {
   once: optimizeCSS,
   dest: tmpDir,
-  src: path.join(__dirname, "public"),
   compress: optimizeCSS,
   yuicompress: optimizeCSS,
   optimization: optimizeCSS ? 0 : 2
