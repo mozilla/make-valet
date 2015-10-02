@@ -1,0 +1,8 @@
+{
+    "Details": "အသေးစိတ်",
+    "errorMessage": "တစ်ခုခု <a href='https://webmaker.org/{{localeInfo.lang}}/search'>ရှာကြည့်ပါ</a> ဒါမှမဟုတ် ကျွနု်ပ်တို့ <a href='https://webmaker.org/{{localeInfo.lang}}'>ဝတ်ဆိုဒ်အား</a>သွားကြည့်ပါ",
+    "errorTitle": "အိုး​ သင်တစ်စုံတစ်ခုတွေ့ရှိ",
+    "Made with Webmaker": "<a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmaker</a>ဖြင်ပြုလုပ်သှ်",
+    "Remix": "ရောစပ်ပါ",
+    "You found a loose thread!": "သင်မရှိတဲ့ အရာ တစ်ခုဆီ ရောက်နေပြီ"
+}

@@ -1,0 +1,8 @@
+{
+    "Details": "פרטים",
+    "errorMessage": "נסה בבקשה <a href='https://webmaker.org/{{localeInfo.lang}}/search'>חיפוש</a> או בקר ב<a href='https://webmaker.org/{{localeInfo.lang}}'>דף הבית</a> שלנו.",
+    "errorTitle": "אופס, מצאת",
+    "Made with Webmaker": "נוצר באמצעות <a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmaker</a>",
+    "Remix": "רמיקס",
+    "You found a loose thread!": "מצאת קרע בחוטים!"
+}

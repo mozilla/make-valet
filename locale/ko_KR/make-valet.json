@@ -1,0 +1,8 @@
+{
+    "Details": "세부사항",
+    "errorMessage": "<a href='https://webmaker.org/{{localeInfo.lang}}/search'>검색</a>을 해보시거나 저희 <a href='https://webmaker.org/{{localeInfo.lang}}'>홈페이지</a>를 방문해주세요.",
+    "errorTitle": "이런, 당신은 찾았습니다.",
+    "Made with Webmaker": "<a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmaker</a>로 만들기",
+    "Remix": "리믹스",
+    "You found a loose thread!": "늘어진 스레드를 발견했습니다!"
+}

@@ -1,0 +1,8 @@
+{
+    "Details": "التفاصيل",
+    "errorMessage": "من فضلك استخدم <a href='https://webmaker.org/{{localeInfo.lang}}/search'>البحث</a> أو قم بزيارة <a href='https://webmaker.org/{{localeInfo.lang}}'>الصفحة الرئيسيّة</a>.",
+    "errorTitle": "عفوا، لقد وجدنا ",
+    "Made with Webmaker": "مصنوع ب <a class=\"make-bar-link\" href=\"https://webmaker.org\">صانع الوب</a>",
+    "Remix": "تطويع",
+    "You found a loose thread!": "لقد وجدت خيط مفكوك!"
+}

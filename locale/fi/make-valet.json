@@ -1,0 +1,8 @@
+{
+    "Details": "Lisätiedot",
+    "errorMessage": "Kokeile <a href='https://webmaker.org/{{localeInfo.lang}}/search'>hakua</a> tai käy <a href='https://webmaker.org/{{localeInfo.lang}}'>etusivullamme</a>.",
+    "errorTitle": "Oho! Löysit",
+    "Made with Webmaker": "Luotu <a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmakerilla</a>",
+    "Remix": "Remiksaa",
+    "You found a loose thread!": "Löysit irronneen langanpätkän!"
+}

@@ -1,0 +1,8 @@
+{
+    "Details": "詳情",
+    "errorMessage": "請試著<a href='https://webmaker.org/{{localeInfo.lang}}/search'>搜尋</a>或前往我們的<a href='https://webmaker.org/{{localeInfo.lang}}'>首頁</a>。",
+    "errorTitle": "喔喔，您找到了",
+    "Made with Webmaker": "以 <a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmaker</a> 製作",
+    "Remix": "重組",
+    "You found a loose thread!": "你找到了掉出來的線頭！（此頁面不存在）"
+}

@@ -1,0 +1,8 @@
+{
+    "Details": "Rincian",
+    "errorMessage": "Silakan coba <a href='https://webmaker.org/{{localeInfo.lang}}/search'>pencarian</a> atau kunjungi <a href='https://webmaker.org/{{localeInfo.lang}}'>situs web kami</a>.",
+    "errorTitle": "Ups, Anda menemukan",
+    "Made with Webmaker": "Dibuat dengan <a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmaker</a>",
+    "Remix": "Olah-kembali",
+    "You found a loose thread!": "Anda menjumpai masalah!"
+}

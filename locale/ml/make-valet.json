@@ -1,0 +1,8 @@
+{
+    "Details": "വിശദാംശങ്ങള്‍",
+    "errorMessage": "ഒന്ന് <a href='https://webmaker.org/{{localeInfo.lang}}/search'>തിരഞ്ഞ്</a> നോക്കൂ അല്ലെങ്കില്‍ ഞങ്ങളുടെ <a href='https://webmaker.org/{{localeInfo.lang}}'>ഹോംപേജ്</a> സന്ദര്‍ശിക്കൂ.",
+    "errorTitle": "ക്ഷമിക്കണം, നിങ്ങള്‍ കണ്ടെത്തിയതൊരു ",
+    "Made with Webmaker": "<a class=\"make-bar-link\" href=\"https://webmaker.org\">വെബ്മേക്കറില്‍</a> നിര്‍മ്മിച്ചത്",
+    "Remix": "റീമിക്സ്",
+    "You found a loose thread!": "നിങ്ങള്‍ കണ്ടത്തിയതൊരു അയഞ്ഞ തന്തുവാണ്."
+}

@@ -1,0 +1,8 @@
+{
+    "Details": "Hollësi",
+    "errorMessage": "Ju lutemi, bëni një <a href='https://webmaker.org/{{localeInfo.lang}}/search'>kërkim</a> ose vizitoni <a href='https://webmaker.org/{{localeInfo.lang}}'>kryefaqen</a> tonë.",
+    "errorTitle": "Ou, gjetët një",
+    "Made with Webmaker": "Bërë me <a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmaker</a>",
+    "Remix": "Përzierje",
+    "You found a loose thread!": "Gjetët një një fill të zgjidhur!"
+}

@@ -1,0 +1,8 @@
+{
+    "Details": "รายละเอียด",
+    "errorMessage": "กรุณาลอง<a href='https://webmaker.org/{{localeInfo.lang}}/search'>ค้นหา</a> หรือเยี่ยมชม<a href='https://webmaker.org/{{localeInfo.lang}}'>หน้าหลัก</a>ของเรา",
+    "errorTitle": "ขออภัย, คุณได้พบ",
+    "Made with Webmaker": "สร้างโดย <a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmaker</a>",
+    "Remix": "เรียบเรียง",
+    "You found a loose thread!": "คุณพบช่องโหว่ของกระทู้!"
+}

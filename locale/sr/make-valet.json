@@ -1,0 +1,8 @@
+{
+    "Details": "Detalji",
+    "errorMessage": "Molimo probajte  <a href='https://webmaker.org/{{localeInfo.lang}}/search'>pretragu</a> ili posjetite našu <a href='https://webmaker.org/{{localeInfo.lang}}'>početnu stranicu</a>.",
+    "errorTitle": "Oops, naišli ste na",
+    "Made with Webmaker": "Napravljeno sa <a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmaker </a>\n\n",
+    "Remix": "Remix",
+    "You found a loose thread!": "Stranica koju ste zahtjevali ne postoji!"
+}

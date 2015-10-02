@@ -1,0 +1,8 @@
+{
+    "Details": "詳細",
+    "errorMessage": "<a href='https://webmaker.org/{{localeInfo.lang}}/search'>ページを検索</a> するか、<a href='https://webmaker.org/{{localeInfo.lang}}'>ホームページへ移動</a> してください。",
+    "errorTitle": "エラーが発生しました！",
+    "Made with Webmaker": "<a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmaker</a> で製作しました",
+    "Remix": "リミックス",
+    "You found a loose thread!": "リンク先が途切れています！"
+}

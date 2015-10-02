@@ -1,0 +1,8 @@
+{
+    "Details": "Детайли",
+    "errorMessage": "Моля опитайте <a href='https://webmaker.org/{{localeInfo.lang}}/search'>търсене</a> или посетете нашата <a href='https://webmaker.org/{{localeInfo.lang}}'>начална страница</a>.",
+    "errorTitle": "Вие открихте",
+    "Made with Webmaker": "Създадено чрез <a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmaker</a>",
+    "Remix": "Ремикс",
+    "You found a loose thread!": "Открихте разхлабена нишка!"
+}

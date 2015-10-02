@@ -1,0 +1,8 @@
+{
+    "Details": "Details",
+    "errorMessage": "Probeer te <a href='https://webmaker.org/{{localeInfo.lang}}/search'>zoeken</a>, of ga naar onze <a href='https://webmaker.org/{{localeInfo.lang}}'>beginpagina</a>.",
+    "errorTitle": "Oeps! U hebt iets ontdekt:",
+    "Made with Webmaker": "Gemaakt met <a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmaker</a>",
+    "Remix": "Remixen",
+    "You found a loose thread!": "U hebt een los eindje ontdekt!"
+}

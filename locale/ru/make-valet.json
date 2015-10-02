@@ -1,0 +1,8 @@
+{
+    "Details": "Подробности",
+    "errorMessage": "Попробуйте <a href='https://webmaker.org/{{localeInfo.lang}}/search'>поиск</a> или посетите нашу <a href='https://webmaker.org/{{localeInfo.lang}}'>главную страницу</a>.",
+    "errorTitle": "Ой, Вы нашли",
+    "Made with Webmaker": "Сделано на <a class=\"make-bar-link\" href=\"https://webmaker.org\">Вебмейкере</a>",
+    "Remix": "Сделать ремикс",
+    "You found a loose thread!": "404: Вы нашли висящую нитку!"
+}

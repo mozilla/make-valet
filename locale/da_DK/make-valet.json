@@ -1,0 +1,8 @@
+{
+    "Details": "Detaljer",
+    "errorMessage": "Prøv at <a href='https://webmaker.org/{{localeInfo.lang}}/search'>søge</a> eller besøg vores <a href='https://webmaker.org/{{localeInfo.lang}}'>startside</a>.",
+    "errorTitle": "Hovsa, du fandt en",
+    "Made with Webmaker": "Lavet med <a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmaker</a>",
+    "Remix": "Remix",
+    "You found a loose thread!": "Du fandt en løs tråd!"
+}

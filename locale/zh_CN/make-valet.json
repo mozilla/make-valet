@@ -1,0 +1,8 @@
+{
+    "Details": "细节",
+    "errorMessage": "请尝试<a href='https://webmaker.org/{{localeInfo.lang}}/search'>搜索</a>或浏览我们<a href='https://webmaker.org/{{localeInfo.lang}}'>首页</a>。",
+    "errorTitle": "哎呀，你已经找到了一个",
+    "Made with Webmaker": "用 <a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmaker</a> 制作的",
+    "Remix": "重组",
+    "You found a loose thread!": "您发现了一个不精确的线程！"
+}

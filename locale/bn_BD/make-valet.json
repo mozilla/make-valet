@@ -1,0 +1,8 @@
+{
+    "Details": "বিস্তারিত",
+    "errorMessage": "অনুগ্রহ করে করে <a href='https://webmaker.org/{{localeInfo.lang}}/search'> অনুসন্ধান </a> করুন অথবা আমাদের <a href='https://webmaker.org/{{localeInfo.lang}}'>হোমপেজ</a> পরিদর্শন করুন।",
+    "errorTitle": "ওহহো, আপনি পেয়েছেন একটি ",
+    "Made with Webmaker": "<a class=\"make-bar-link\" href=\"https://webmaker.org\">ওয়েমেকার</a> দিয়ে তৈরী",
+    "Remix": "রিমিক্স",
+    "You found a loose thread!": "পৃষ্ঠাটি খুঁজে পাওয়া যায় নি!"
+}

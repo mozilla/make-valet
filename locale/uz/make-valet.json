@@ -1,0 +1,8 @@
+{
+    "Details": "Tavsilotlar",
+    "errorMessage": "Iltimos, <a href='https://webmaker.org/{{localeInfo.lang}}/search'>qidiruv</a> yordamidan foydalaning yoki bizning <a href='https://webmaker.org/{{localeInfo.lang}}'>bosh sahifa</a>ni ko'zdan kechiring.",
+    "errorTitle": "Iya, biz topgan narsa  ",
+    "Made with Webmaker": "<a class=\"make-bar-link\" href=\"https://webmaker.org\">VebYaratuvchi</a> yordamida yaratilgan",
+    "Remix": "Remiks",
+    "You found a loose thread!": "Adashib qoldingiz chog'i!"
+}

@@ -1,0 +1,8 @@
+{
+    "Details": "Detaloj",
+    "errorMessage": "Bonvole provu <a href='https://webmaker.org/{{localeInfo.lang}}/search'>serĉi</a> aŭ viziti nian <a href='https://webmaker.org/{{localeInfo.lang}}'>retejon</a>.",
+    "errorTitle": "Oops, vi trovis",
+    "Made with Webmaker": "Kreita per <a class=\"make-bar-link\" href=\"https://webmaker.org\">Retkreilo</a>",
+    "Remix": "Remiksi",
+    "You found a loose thread!": "You found a loose thread!"
+}
