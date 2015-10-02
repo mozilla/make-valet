@@ -20,8 +20,8 @@
     "newrelic": "^1.22.1",
     "nunjucks": "0.1.10",
     "url-template": "^2.0.6",
-    "webmaker-download-locales": "^0.2.5",
-    "webmaker-i18n": "^0.3.27",
+    "webmaker-download-locales": "0.2.5",
+    "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.3.11.tar.gz",
     "webmaker-locale-mapping": "0.0.5",
     "webmaker-translation-stats": "0.0.1"
   },
