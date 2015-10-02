@@ -30,6 +30,6 @@
     "download-locales": "webmaker-download-locales make-valet"
   },
   "engines": {
-    "node": "4.1.x"
+    "node": "^4.1.1"
   }
 }
