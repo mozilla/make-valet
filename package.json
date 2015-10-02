@@ -18,10 +18,10 @@
     "makeapi-client": "^0.5.30",
     "messina": "^0.1.2",
     "newrelic": "^1.22.1",
-    "nunjucks": "0.1.10",
+    "nunjucks": "^2.1.0",
     "url-template": "^2.0.6",
-    "webmaker-download-locales": "0.2.5",
-    "webmaker-i18n": "https://github.com/mozilla/node-webmaker-i18n/archive/v0.3.11.tar.gz",
+    "webmaker-download-locales": "^0.2.5",
+    "webmaker-i18n": "^0.3.27",
     "webmaker-locale-mapping": "0.0.5",
     "webmaker-translation-stats": "0.0.1"
   },
