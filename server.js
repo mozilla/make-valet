@@ -87,8 +87,8 @@ if ( env.get( "ENABLE_GELF_LOGS" ) ) {
   app.use(express.logger());
 }
 
-app.use(helmet.iexss());
-app.use(helmet.contentTypeOptions());
+app.use(helmet.xssFilter());
+app.use(helmet.noSniff());
 
 app.use(express.compress());
 // Redirect paths with trailing slashes to paths w/o trailing slashes
