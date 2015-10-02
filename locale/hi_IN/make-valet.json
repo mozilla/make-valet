@@ -1,0 +1,8 @@
+{
+    "Details": "विवरण",
+    "errorMessage": "एक प्रयास करें <a href='https://webmaker.org/{{localeInfo.lang}}/search'>search</a> या जाएँ हमारे <a href='https://webmaker.org/{{localeInfo.lang}}'>होमपेज</a>.",
+    "errorTitle": "उफ़, आपको मिल गया है एक",
+    "Made with Webmaker": "<a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmaker</a> से बनाया गया",
+    "Remix": "पुनर्मिश्रित करे",
+    "You found a loose thread!": "आपको एक ढीला धागा मिल गया!"
+}

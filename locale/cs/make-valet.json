@@ -1,0 +1,8 @@
+{
+    "Details": "Detaily",
+    "errorMessage": "Prosím zkuste <a href='https://webmaker.org/{{localeInfo.lang}}/search'>vyhledávání</a> nebo navštivte naši <a href='https://webmaker.org/{{localeInfo.lang}}'>domovskou stránku</a>.",
+    "errorTitle": "Jejda, našli jste ",
+    "Made with Webmaker": "Vytvořeno s <a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmakerem</a>",
+    "Remix": "Remix",
+    "You found a loose thread!": "Našli jste volné vlákno!"
+}

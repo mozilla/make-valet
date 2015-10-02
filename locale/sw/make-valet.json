@@ -1,0 +1,8 @@
+{
+    "Details": "Maelezo",
+    "errorMessage": "Tafadhali ijaribu <a href='https://webmaker.org/{{localeInfo.lang}}/search'>tafuta</a>au uutembelee <a href='https://webmaker.org/{{localeInfo.lang}}'>ukurasa wetu wa nyumbani</a>.",
+    "errorTitle": "Lo, umepata",
+    "Made with Webmaker": "Imeundwa na <a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmaker</a>",
+    "Remix": "Remix",
+    "You found a loose thread!": "Umepata uzi uliolegea!"
+}

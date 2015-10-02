@@ -1,0 +1,8 @@
+{
+    "Details": "Λεπτομέρειες",
+    "errorMessage": "Παρακαλώ δοκιμάστε την <a href='https://webmaker.org/{{localeInfo.lang}}/search'>αναζήτηση</a> ή επισκεφθείτε την <a href='https://webmaker.org/{{localeInfo.lang}}'>ιστοσελίδα</a> μας.",
+    "errorTitle": "Ωχ, έχετε εντοπίσει ένα",
+    "Made with Webmaker": "Κατασκευάστηκε με το <a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmaker</a>",
+    "Remix": "Remix",
+    "You found a loose thread!": "Βρήκατε κάποιο χαλαρό νήμα!"
+}

@@ -1,0 +1,8 @@
+{
+    "Details": "Detalles",
+    "errorMessage": "Por favor, intenta con <a href='https://webmaker.org/{{localeInfo.lang}}/search'>búsqueda</a> o visita nuestro  <a href='https://webmaker.org/{{localeInfo.lang}}'>sitio</a>.",
+    "errorTitle": "Vaya, has encontrado un/a",
+    "Made with Webmaker": "Hecho con <a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmaker</a>",
+    "Remix": "Mezclar nuevamente",
+    "You found a loose thread!": "You found a loose thread!"
+}

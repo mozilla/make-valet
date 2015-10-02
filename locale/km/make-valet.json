@@ -1,0 +1,8 @@
+{
+    "Details": "ព័ត៌មាន​លម្អិត",
+    "errorMessage": "សូម​ព្យាយាម <a href='https://webmaker.org/{{localeInfo.lang}}/search'>ស្វែងរក</a> ឬ​មើល <a href='https://webmaker.org/{{localeInfo.lang}}'>គេហទំព័រ</a>របស់​យើង។",
+    "errorTitle": " អូ! អ្នក​បាន​រក​ឃើញ",
+    "Made with Webmaker": "បាន​បង្កើត​ដោយ​ប្រើ <a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmaker</a>",
+    "Remix": "បញ្ចូល​គ្នា",
+    "You found a loose thread!": "អ្នក​បាន​រក​ឃើញ​ការ​ឆ្លើយឆ្លង​​ដែល​ដាច់​ពី​គ្នា!"
+}

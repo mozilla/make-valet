@@ -1,0 +1,8 @@
+{
+    "Details": "விவரங்கள்",
+    "errorMessage": "தயவுசெய்து <a href='https://webmaker.org/{{localeInfo.lang}}/search'>தேடுதலுக்கு</a> முயற்சி செய்யுங்கள் அல்லது எங்களது <a href='https://webmaker.org/{{localeInfo.lang}}'>முகப்புபக்கத்தைக்</a> காணுங்கள்.",
+    "errorTitle": "அடடா, நீங்கள் கண்டுபிடித்தது ஒரு",
+    "Made with Webmaker": "<a class=\"make-bar-link\" href=\"https://webmaker.org\"> WebMaker </ a> கொண்டு தயாரிக்கப்படுகிறது",
+    "Remix": "மறுஉருவாக்கம்",
+    "You found a loose thread!": "நீங்கள் ஒரு தளர்வான நூலை கண்டுபிடித்தீர்!"
+}

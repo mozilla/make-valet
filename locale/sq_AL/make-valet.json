@@ -1,0 +1,8 @@
+{
+    "Details": "Detaje",
+    "errorMessage": "Please try a <a href='https://webmaker.org/{{localeInfo.lang}}/search'>kerkim</a> ose vizito<a href='https://webmaker.org/{{localeInfo.lang}}'>faqen</a>.",
+    "errorTitle": "Oops, ke gjetur një",
+    "Made with Webmaker": "Bërë me <a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmaker</a>",
+    "Remix": "Remix",
+    "You found a loose thread!": "You found a loose thread!"
+}

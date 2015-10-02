@@ -1,0 +1,8 @@
+{
+    "Details": "Ayrıntılar",
+    "errorMessage": "Bir <a href='https://webmaker.org/{{localeInfo.lang}}/search'>arama yapmayı</a> deneyebilir ya da <a href='https://webmaker.org/{{localeInfo.lang}}'>anasayfamıza</a> bakabilirsin.",
+    "errorTitle": "Bekle, bir şey yakaladın",
+    "Made with Webmaker": "<a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmaker</a> ile yapılmıştır.",
+    "Remix": "Yeniden Kar",
+    "You found a loose thread!": "Gevşek bir vida buldun!"
+}

@@ -1,0 +1,8 @@
+{
+    "Details": "Xehetasunak",
+    "errorMessage": "Mesedez egin <a href='https://webmaker.org/{{localeInfo.lang}}/search'>bilaketa</a> bat edo bisitatu gure <a href='https://webmaker.org/{{localeInfo.lang}}'>orri nagusia</a>.",
+    "errorTitle": "Ene, bat topatu duzu",
+    "Made with Webmaker": "<a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmaker</a>rekin egina",
+    "Remix": "Nahastu",
+    "You found a loose thread!": "Hari solte bat aurkitu duzu!"
+}

@@ -1,0 +1,8 @@
+{
+    "Details": "Részletek",
+    "errorMessage": "Please try a <a href='https://webmaker.org/{{localeInfo.lang}}/search'>search</a> or visit our <a href='https://webmaker.org/{{localeInfo.lang}}'>homepage</a>.",
+    "errorTitle": "Oops, you've found a",
+    "Made with Webmaker": "<a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmaker</a>rel készült",
+    "Remix": "Remix",
+    "You found a loose thread!": "You found a loose thread!"
+}

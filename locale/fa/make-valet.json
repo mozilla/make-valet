@@ -1,0 +1,8 @@
+{
+    "Details": "جزئیات",
+    "errorMessage": "لطفا در <a href='https://webmaker.org/{{localeInfo.lang}}/search'> جستجو کنید </a> یا از سایت <a href='https://webmaker.org/{{localeInfo.lang}}'> ما دیدن کنید </a>.",
+    "errorTitle": "اوه، شما پیدا کردین یک",
+    "Made with Webmaker": "ساخته شده توسط <a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmaker</a>",
+    "Remix": "مخلوط",
+    "You found a loose thread!": "شما یک صفحه ی بی پایه پیدا کردید!"
+}
