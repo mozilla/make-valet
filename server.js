@@ -143,6 +143,14 @@ app.get(
 );
 
 app.get(
+  "/makes.json",
+  middleware.setUsername,
+  middleware.proxyPathPrepare(env.get("STATIC_DATA_STORE")),
+  middleware.addCORS(env.get("ALLOW_ORIGINS")),
+  routes.proxyHandler
+);
+
+app.get(
   /.*_$/,
   middleware.setUsername,
   middleware.proxyPathPrepare(env.get("STATIC_DATA_STORE")),
