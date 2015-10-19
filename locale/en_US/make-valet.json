@@ -4,5 +4,6 @@
 	"errorTitle": "Oops, you've found a",
 	"Made with Webmaker": "Made with <a class=\"make-bar-link\" href=\"https://webmaker.org\">Webmaker</a>",
 	"Remix": "Remix",
-	"You found a loose thread!": "You found a loose thread!"
+	"You found a loose thread!": "You found a loose thread!",
+	"Deprecation Notice": "Unfortunately, we no longer support this tool, so your awesome project is no longer remixable. Have you tried the new <a class=\"make-bar-link\" href=\"https://thimble.mozilla.org\">Mozilla Thimble</a>?"
 }
