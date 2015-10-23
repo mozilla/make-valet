@@ -56,11 +56,3 @@ module.exports.proxyHandler = function(req, res, next) {
     next(err);
   });
 };
-
-module.exports.webmakerProfile2Redirect = function(profileURL) {
-  var redirectURL = template.parse(profileURL);
-
-  return function(req, res, next) {
-    res.redirect(307, redirectURL.expand({ username: res.locals.username }));
-  };
-};

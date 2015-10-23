@@ -132,12 +132,6 @@ app.get(
 );
 
 app.get(
-  "/",
-  middleware.setUsername,
-  routes.webmakerProfile2Redirect(env.get("PROFILE_URL"))
-);
-
-app.get(
   "/dynamic/js/googleanalytics.js",
   routes.analytics
 );
