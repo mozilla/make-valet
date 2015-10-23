@@ -40,9 +40,9 @@ module.exports.proxyHandler = function(req, res, next) {
       return next("route");
     }
 
-    // Send content-type stored on S3
-    if (proxyRes.headers["content-type"]) {
-      res.type(proxyRes.headers["content-type"]);
+    var contentType = proxyRes.headers["content-type"];
+    if (contentType && contentType !== "binary/octet-stream") {
+      res.type(contentType);
     } else {
       res.type("text/html; charset=UTF-8");
     }
