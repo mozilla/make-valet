@@ -16,7 +16,6 @@ var configVerify = require("./lib/configverify"),
     Habitat = require("habitat"),
     i18n = require("webmaker-i18n"),
     lessMiddleware = require("less-middleware"),
-    Makeapi = require("makeapi-client"),
     middleware = require("./lib/middleware"),
     nunjucks = require("nunjucks"),
     path = require("path"),
@@ -28,14 +27,6 @@ Habitat.load();
 var app = express(),
     configErrors,
     env = new Habitat(),
-    makeAPIClient = new Makeapi({
-      apiURL: env.get("MAKE_ENDPOINT"),
-      hawk: {
-        id: env.get("MAKE_PUBLIC_KEY"),
-        key: env.get("MAKE_PRIVATE_KEY"),
-        algorithm: "sha256"
-      }
-    }),
     nunjucksEnv = new nunjucks.Environment( new nunjucks.FileSystemLoader( path.join( __dirname, 'views' )), {
       autoescape: true
     }),
@@ -149,14 +140,6 @@ app.get(
   middleware.setUsername,
   middleware.proxyPathPrepare(env.get("STATIC_DATA_STORE")),
   middleware.addCORS(env.get("ALLOW_ORIGINS")),
-  routes.proxyHandler
-);
-
-app.get(
-  /.*\/(remix|edit)$/,
-  middleware.makeRedirect(makeAPIClient),
-  middleware.setUsername,
-  middleware.proxyPathPrepare(env.get("STATIC_DATA_STORE")),
   routes.proxyHandler
 );
 
