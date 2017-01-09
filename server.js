@@ -162,7 +162,6 @@ app.get(
 
 app.get(
   /.*[^_]$/,
-  middleware.loadMakeDetails(makeAPIClient),
   middleware.addCSP({
     detailsHost: env.get("WEBMAKERORG"),
     reportToHost: env.get("CSP_LOGGER")

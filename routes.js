@@ -1,4 +1,5 @@
 var http = require("http"),
+    url = require('url'),
     i18n = require("webmaker-i18n"),
     path = require("path"),
     template = require("url-template"),
@@ -11,7 +12,8 @@ module.exports.analytics = function(req, res, next) {
 };
 
 module.exports.embedShellHandler = function(req, res, next) {
-  if (res.locals.make.contentType == "application/x-x-ray-goggles") {
+  // check if this is a goggles make
+  if (req.path.match(/^\/(.*)\/.*$/)[1] == "goggles") {
     return next();
   }
 
