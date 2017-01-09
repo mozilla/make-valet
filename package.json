@@ -15,7 +15,6 @@
     "helmet": "^0.12.0",
     "hood": "0.2.1",
     "less-middleware": "^2.0.1",
-    "makeapi-client": "^0.5.30",
     "messina": "^0.1.2",
     "newrelic": "^1.22.1",
     "nunjucks": "^2.1.0",
