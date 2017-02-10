@@ -29,6 +29,6 @@
     "download-locales": "webmaker-download-locales make-valet"
   },
   "engines": {
-    "node": "^4.1.1"
+    "node": "^6.9.5"
   }
 }

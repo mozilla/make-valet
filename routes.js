@@ -13,7 +13,19 @@ module.exports.analytics = function(req, res, next) {
 
 module.exports.embedShellHandler = function(req, res, next) {
   // check if this is a goggles make
-  if (req.path.match(/^\/(.*)\/.*$/)[1] == "goggles") {
+  var result = req.path.match(/^\/(.*)\/.*$/);
+  
+  if (result === null) {
+    var err = {
+      message: req.gettext("You found a loose thread!"),
+      status: 404
+    };
+
+    res.status(err.status);
+    return res.render("error.html", err);
+  }
+
+  if (result[1] == "goggles") {
     return next();
   }
 
